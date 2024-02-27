@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Container, Flex, Heading, Image, Stack, Text, VStack, Input, useColorModeValue, chakra, Icon, Divider } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, Heading, Image, Stack, Text, VStack, Input, useColorModeValue, chakra, Icon, Divider, Select } from "@chakra-ui/react";
 import { FaUserCircle, FaEnvelope, FaLock, FaTwitter, FaInstagram, FaYoutube, FaFacebookF } from "react-icons/fa";
 
 const Index = () => {
@@ -45,9 +45,22 @@ const Index = () => {
                   <Icon as={FaLock} mr={2} />
                   <Input placeholder="Password" type="password" isRequired />
                 </Flex>
-                <Button w="full" colorScheme="purple">
+                <Select placeholder="Select membership tier" isRequired>
+                  <option value="bronze">Bronze Tier</option>
+                  <option value="silver">Silver Tier</option>
+                  <option value="gold">Gold Tier</option>
+                </Select>
+                <Button w="full" colorScheme="purple" mt={4}>
                   Sign Up
                 </Button>
+                <Text fontSize="sm" mt={4} color={textColor}>
+                  Join our live chat and start conversing with other members!
+                </Text>
+                <Box w="full" p={4} borderWidth="1px" borderRadius="md">
+                  <Text fontSize="sm" color={textColor}>
+                    Live chat feature coming soon!
+                  </Text>
+                </Box>
               </Stack>
             </chakra.form>
           </Box>
